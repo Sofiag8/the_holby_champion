@@ -11,7 +11,7 @@
 
 <p> a base champion class with some general actions (methods) such as level up, gain experience, death, save character, load character and  increase stats </p>
 
-<p> Our hero/heroine, can be any of 6 different classes, Cleric, Fighter, Mage, Paladin,Ranger, or Rogue. With attributes fot the class suck as initial stats, attack reapon, defense equipments, armor, AND some general method for each class like attack, defend, and use of magic <p>
+<p> Our hero/heroine, can be any of 6 different classes, Cleric, Fighter, Mage, Paladin,Ranger, or Rogue. With attributes for the class such as initial stats, attack weapon, defense equipments, armor, AND some general methods for each class like attack, defend, and use of magic <p>
 
 <p> And finally, our champion class will have also subclasses: Solar, Arc and void with general attrubutes such as type (solar, arc or void - set only one for each champion class) and subclass stats with power as a stat that determines base damage and Element affinity that affects power by a certain percetange depending on the enemy element .
 Also the subclasses must have a meethod skill, shich uses a special Sub-class skill with an efficacy based off the sub class stats. This method must know the element of an enemy.</p>
