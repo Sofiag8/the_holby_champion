@@ -24,5 +24,8 @@ if __name__ == "__main__":
         print("----------------------------------------------")
         print(file.read())
     print("-----------------------------------------------")
-    print("NOTES:")
-    print("All the attributtes about experience and stats points are set to 0 because champions were just created, the general statistics are also set to 0 because at this point I haven't created the diferente champions classes")
+
+    """ NOTES
+    All the attributtes about experience and stats points are set to 0 because
+    champions were just created, the general statistics are also set to 0
+    because I haven't created the diferente champions classes """
