@@ -6,9 +6,8 @@ from base_champion import base_champion
 class champion(base_champion):
     """ champion inherited from the base_champion class
     with id and number of objects (champions created) """
-    def __init__(self, name="", race="", gender="", level=0, exp_next_level=0,
-                 current_exp=0, total_exp=0, stats={},
-                 stat_points=0, id=None):
+    def __init__(self, name="", race="", gender="", level=0, exp_next_level=100,
+                 current_exp=0, total_exp=0, stats={'Health': 0, 'Attack': 0, 'Defense': 0, 'Magic': 0, 'Speed': 0}, stat_points=0, id=None):
         """ this is the initialization of the champion class
 
         Args:
@@ -45,10 +44,47 @@ class champion(base_champion):
         self.exp_next_level = exp_next_level
         self.current_exp = current_exp
         self.total_exp = total_exp
-        self.stats = {'Health': 0, 'Attack': 0, 'Defense': 0, 'Magic': 0,
-                      'Speed': 0}
+        self.stats = stats
         self.stat_points = stat_points
 
+
+    def level_up(self):
+        """ Method that allows to the champion level up after
+        certain amount of EXP, increasing his/her level value and gaining
+        3 stats points. Here (everytime the champion level up) tje current
+        EXP is reset to 0, EXP for next level is set and total EXP is increased
+        """
+        if self.current_exp == self.exp_next_level:
+            self.level += 1
+            self.stat_points += 3
+            self.current_exp = 0
+            self.exp_next_level = 100
+            self.total_exp += 25
+            return (self)
+
+    def gain_exp(self):
+        """ This method increases the champion current EXP """
+
+    def death(self):
+        """ Method death. If champion dies, he/she loses 50% of the current
+        experience """
+
+    def increase_stats(self):
+        """ uses a dictionary (method update stats) to update stats based of
+        the amount of stat points the champion currently has """
+        if current_exp == 100:
+            update_stats(self)
+
+    def update_stats(self):
+        """ stats update method, incremeting by 3 according to the stats points
+        the champion has"""
+        if "Attack" in self.stats:
+            self.stats["Attack"] += 3
+        if "Defense" in self.stats:
+            self.stats["Defense"] += 3
+        if "Magic" in self.stats:
+            self.stats["Magic"] += 3
+        return self.stats
 
     def to_dictionary(self):
         """ this is a method definition that creates a dictionary
